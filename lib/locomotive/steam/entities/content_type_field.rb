@@ -12,7 +12,8 @@ module Locomotive::Steam
         localized:  false,
         required:   false,
         unique:     false,
-        default:    nil
+        default:    nil,
+        searchable: false,
       }.merge(attributes))
     end
 
