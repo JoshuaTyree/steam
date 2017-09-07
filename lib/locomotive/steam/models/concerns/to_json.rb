@@ -9,7 +9,6 @@ module Locomotive
             {}.tap do |_attributes|
               attributes.each do |key, value|
                 next if value && value.respond_to?(:repository) # skip associations
-
                 _attributes[key.to_s] = value
               end
             end

@@ -25,6 +25,8 @@ module Locomotive::Steam
       self[:class_name] || self[:target]
     end
 
+
+
     def order_by
       if (order_by = self[:order_by]).present?
         # from Filesystem -> string, from MongoDB -> array (string transformed by Engine)
@@ -49,6 +51,7 @@ module Locomotive::Steam
 
     def required?; self[:required]; end
     def localized?; self[:localized]; end
+    def searchable?; self[:searchable]; end
 
     def association_options
       {
